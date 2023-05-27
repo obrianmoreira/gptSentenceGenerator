@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import GptCorrection from "./gptcorrection";
 import { H1Text, PText } from "../Items/Texts/texts";
 import axios from "axios";
-import dotenv from 'dotenv';
 
 const GptSentence = ({data, datatwo}) => {
 
     const [gptSentence, setGptSentence] = useState('')
-    dotenv.config();
     const API_KEY = process.env.API_KEY;
 
     useEffect(() => {
@@ -56,7 +54,7 @@ const GptSentence = ({data, datatwo}) => {
 
         }
 
-    }, [data]);
+    }, [data, API_KEY]);
 
     return (
         
