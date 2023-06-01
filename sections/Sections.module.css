@@ -63,7 +63,7 @@
 #outputGpt{
     border-radius: 5px;
     background-color: aliceblue;
-    height: 160px;
+    height: fit-content;
     padding: 10px 20px 0px 20px;
     margin-top: 30px;
 }
@@ -174,7 +174,7 @@
     #outputGpt{
         border-radius: 5px;
         background-color: aliceblue;
-        height: 160px;
+        height: fit-content;
         padding: 10px 20px 0px 20px;
     }
     
@@ -275,7 +275,7 @@
     #outputGpt{
         border-radius: 5px;
         background-color: aliceblue;
-        height: 160px;
+        height: fit-content;
         padding: 10px 20px 0px 20px;
     }
 
