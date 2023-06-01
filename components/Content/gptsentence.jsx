@@ -17,7 +17,7 @@ const GptSentence = ({data, datatwo}) => {
                 try {
 
                     const res = await axios.post (
-                        engine="text-davinci-003",
+                        "https://api.openai.com/v1/engines/text-davinci-002/completions",
                         {
                             prompt: `Create a Portuguese sentence in this sentence type: "${data}". Pay close attention to create a correct sentence and use appropriate Portuguese expressions. Never show english sentences too.`,
                             max_tokens: 100,
