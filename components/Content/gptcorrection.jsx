@@ -17,7 +17,7 @@ const GptCorrection = ({data, datatwo}) => {
                     const res = await axios.post(
                         "https://api.openai.com/v1/engines/text-davinci-003/completions",
                         {
-                            prompt:`"Compare this portuguese sentence: ${data} with this english sentence: ${datatwo}. Say in Portuguese if the second, your sentence, is a good translation of the first one. If the ${datatwo} isn't a good translation, show how would be a good translation in English of the ${data} sentence but using Portuguese to talk with the user."`,
+                            prompt:`"Compare this portuguese sentence: ${data} with this english sentence: ${datatwo}. Say in Portuguese if the second, your sentence, is a good translation of the first one. If the ${datatwo} isn't a good translation, show how would be a good translation in English of the ${data} sentence. Remember to talk in Portuguese."`,
                             max_tokens: 100,                            
                             temperature: 0.2,
                         },
