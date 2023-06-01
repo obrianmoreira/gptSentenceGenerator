@@ -1,8 +1,8 @@
 import { Cards } from "@/components/Items/Cards/cards"
 import { Frame } from "@/components/Layout/layout"
 import { Wall } from "@/components/Layout/layout"
-import { H1Text, H2Text, H3Text, H4Text, PText } from "@/components/Items/Texts/texts"
-import { useEffect, useState } from "react";
+import { H1Text, H2Text, PText } from "@/components/Items/Texts/texts"
+import { useState } from "react";
 import Style from '../sections/Sections.module.css';
 import GptSentence from "@/components/Content/gptsentence";
 import { Button } from "@/components/Items/Button/button";
@@ -18,7 +18,7 @@ const Form = (props) => {
     const [typeInput, setTypeInput] = useState('Escola Seu Tipo de Frase');
 
     // English input to checked where the person click to write the sentence in English to be compared to Portuguese
-    const [englishInput, setEnglishInput] = useState('Torne em ingles a frase up');
+    const [englishInput, setEnglishInput] = useState('Torne A Frase Acima Inglês');
 
     // Show the options of auxiliaries, it works with the ternary operator
     const [showOptions, setShowOptions] = useState(false);
@@ -31,6 +31,8 @@ const Form = (props) => {
 
     // This is the second button. It gets the data from user English version to update buttonGptAgain variable
     const [buttonGptAgain, setButtonGptAgain] = useState('');
+
+    const [blockButton, setBlockButton] = useState(true);
 
     // When clicked it gets the data of the li placeholder and make it the data of the auxiliary input
     const handleAux = (auxInput) => {
@@ -45,14 +47,17 @@ const Form = (props) => {
     // This function uses the first button to receive the auxiliary and type in the variable of the first button connected with Gpt
     const sendGpt = () => {
         setReset(true);
-        setSentenceGpt(typeInput + auxInput);
-        setShowOptions(false);
+        setSentenceGpt(typeInput);
         setTypeOptions(false);
+        setBlockButton(false)
     }
 
     // This function uses the second button to receive the english input in the variable of the first button connected with Gpt
     const sendGptAgain = () => {
         setButtonGptAgain(englishInput)
+        if (blockButton === false) {
+            alert('Você precisa apertar o botão "Reiniciar" para nossa AI criar uma nova frase.')
+        }
     }
 
     const handleRest = () => {
@@ -67,32 +72,18 @@ const Form = (props) => {
         */
     }
 
-    const auxiliarArray = [
-
-        {
-            text: "Can"
-        },
-        {
-            text: "Did"
-        },
-        {
-            text: "Will"
-        }
-    
-    ]
-
     const sentenceType = [
         {
-            text: "interrogative"
+            text: "Interrogative"
         },
         {
-            text: "negative"
+            text: "Negative"
         },
         {
-            text: "interrogative-negative"
+            text: "Interrogative-negative"
         },
         {
-            text: "affirmative"
+            text: "Affirmative"
         }
     ]
 
@@ -107,31 +98,9 @@ const Form = (props) => {
                 <Cards cardClass={Style.card}>
                     <H2Text h2Text={props.titleCard} h2Style={Style.h2Style}/>
                     <Frame frame={Style.frameCard}>
-                        <input className={Style.input} placeholder={auxInput} onClick={() => setShowOptions(!showOptions)}></input>
                         <input className={Style.input} placeholder={typeInput} onClick={() => setTypeOptions(!showTypeOptions)}></input>
-                        <Button buttonClick={sendGpt} buttonText="Gerar" buttonStyle={Style.btnStyle}/>
+                        {blockButton ? (<Button buttonClick={sendGpt} buttonText="Gerar" buttonStyle={Style.btnStyle}/>) : (<Button buttonClick={sendGpt} buttonText="Gerar" buttonStyle={Style.btnDisabled} disabled="disabled"/>)}
                     </Frame>
-                    {showOptions ?  ( 
-                        
-                        <>
-
-                            {auxiliarArray.map((aux) => {
-                                return(
-                                    <>
-                                        <li onClick={() => handleAux(aux.text)}>{aux.text}</li>
-                                    </>
-                                )
-                            })}
-                                                        
-                        </>
-                    
-                    ) : (
-                        <>
-
-                        </>
-                    )}
-
-                    <br />
 
                     {showTypeOptions ?  ( 
                         

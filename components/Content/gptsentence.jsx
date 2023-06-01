@@ -5,8 +5,8 @@ import axios from "axios";
 
 const GptSentence = ({data, datatwo}) => {
 
-    const [gptSentence, setGptSentence] = useState('')
-    const API_KEY = process.env.API_KEY;
+    const [gptSentence, setGptSentence] = useState('');
+    const API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
     useEffect(() => {
 
@@ -17,10 +17,9 @@ const GptSentence = ({data, datatwo}) => {
                 try {
 
                     const res = await axios.post (
-
-                        "https://api.openai.com/v1/engines/text-davinci-003/completions",
+                        "https://api.openai.com/v1/engines/text-davinci-002/completions",
                         {
-                            prompt: `Make a sentence in Portugueses translating this auxiliary and type of sentence ${data} also to Portuguese to make the sentence. Dont show the english version.`,
+                            prompt: `Create a Portuguese sentence in this sentence type: "${data}". Pay close attention to create a correct sentence and use appropriate Portuguese expressions. Never show english sentences too.`,
                             max_tokens: 100,
                             temperature: 0.7,
                         },
@@ -39,7 +38,6 @@ const GptSentence = ({data, datatwo}) => {
                     if(choices && choices.length > 0) {
                         const content = choices[0].text;
                         setGptSentence(content);
-
                     }
 
                 } catch(error) {
@@ -55,6 +53,7 @@ const GptSentence = ({data, datatwo}) => {
         }
 
     }, [data, API_KEY]);
+
 
     return (
         
