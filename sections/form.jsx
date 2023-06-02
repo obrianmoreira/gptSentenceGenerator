@@ -15,7 +15,7 @@ const Form = (props) => {
     const [auxInput, setAuxInput] = useState('Escola Seu Auxiliar');
     
     // Type of the sentence input where the person click to open the options and retrieve the type of sentence data
-    const [typeInput, setTypeInput] = useState('Escola Seu Tipo de Frase');
+    const [typeInput, setTypeInput] = useState('Clique Aqui e Escolha Seu Tipo de Frase');
 
     // English input to checked where the person click to write the sentence in English to be compared to Portuguese
     const [englishInput, setEnglishInput] = useState('Torne A Frase Acima Inglês');
@@ -106,13 +106,15 @@ const Form = (props) => {
                         
                         <>
 
-                            {sentenceType.map((type) => {
-                                return(
-                                    <>
-                                        <li onClick={() => handleType(type.text)}>{type.text}</li>
-                                    </>
-                                )
-                            })}
+                            <ul>
+                                {sentenceType.map((type) => {
+                                    return(
+                                        <>
+                                            <li onClick={() => handleType(type.text)}>{type.text}</li>
+                                        </>
+                                    )
+                                })}
+                            </ul>
                         
                         </>
                     
