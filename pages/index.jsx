@@ -17,8 +17,8 @@ export default function Home() {
       <main>
         <Section
           title="Pratique Inglês de graça Criando Frases Com Nossa AI"
-          subTitle="Ao lado você encontra um formulário conectado com nossa Inteligência Artificial. Nele você pode decidir qual tipo de frase você quer (pergunta, negação, afirmação ou pergunta negando). Com o clique do botão 'Gerar' nossa inteligência artifiical vai gerar uma frase para você. No campo de texto em baixo, transforme em inglês a frase. Dependendo de sua resposta, nossa AI também vai dizer se você errou ou não ao apertar no botão 'Resultado'. 'Reinicie' caso queira reiniciar e criar uma frase nova. Com a prática você ficará um especialista em criar frases em inglês."
-          titleCard="Escolha as regras e tipos de frases que quer treinar abaixo"
+          subTitle="Conheça nosso formulário conectado com nossa Inteligência Artificial. Nele você pode decidir qual tipo de frase você quer (pergunta, negação, afirmação ou pergunta negando). Com o clique do botão 'Gerar' nossa inteligência artifiical vai gerar uma frase para você. No campo de texto em baixo, transforme em inglês a frase. Dependendo de sua resposta, nossa AI também vai dizer se você errou ou não ao apertar no botão 'Resultado'. 'Reinicie' caso queira reiniciar e criar uma frase nova. Com a prática você ficará um especialista em criar frases em inglês."
+          titleCard="Escolha os tipos de frases que quer treinar abaixo"
         />
       </main>
     </>
