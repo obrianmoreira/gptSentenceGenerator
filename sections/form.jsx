@@ -18,7 +18,7 @@ const Form = (props) => {
     const [typeInput, setTypeInput] = useState('Clique Aqui e Escolha Seu Tipo de Frase');
 
     // English input to checked where the person click to write the sentence in English to be compared to Portuguese
-    const [englishInput, setEnglishInput] = useState('Torne A Frase Acima Inglês');
+    const [englishInput, setEnglishInput] = useState('Clique Aqui Para Criar A Frase Acima em Inglês');
 
     // Show the options of auxiliaries, it works with the ternary operator
     const [showOptions, setShowOptions] = useState(false);
