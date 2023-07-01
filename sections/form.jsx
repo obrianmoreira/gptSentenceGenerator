@@ -184,7 +184,7 @@ const Form = (props) => {
                     </Frame>
                 </Cards>
             </Wall>
-            <a href="https://github.com/obrianmoreira"><PText pText="Website criado por Brian Moreira, professor de Inglês aos seus queridos alunos." pStyle={Style.footerText}/></a>
+            <a href=""><PText pText="Website criado por Brian Moreira, professor de Inglês aos seus queridos alunos." pStyle={Style.footerText}/></a>
         </>
 
     )
