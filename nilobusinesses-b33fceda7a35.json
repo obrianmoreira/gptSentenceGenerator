@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nilobusinesses",
+  "private_key_id": "b33fceda7a35e7a6ee541cd449e531e48fd312dc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChmBwHk8bKCkwn\ncUiKt7pk9B9TowJbcPeCPTAQS7T8S56qcdpfl9XsIoO5ZdS2gwsn1115ctW1xi8U\nTOB6OdoLpaBU3yJxhz7x30nxAZou4hPH8mQDq1b056y7cgteGrQmbhZ5Lcpk3yPt\nr0aFLsUKzlEZ34n1rBuLl7Fm2EuZrPrecPipRwkRJ/c5Zlbg6lJ8iEEGoeLdzspr\nap4g611/Ga1QVSK2EinKzza+FiTgcQz8S5gahk46+NWrysN8LTt3VuL/P263lPz8\n258yhLkICcn774DnHm7xxgfKzpcsdTwOI3i7tUmGLU2rmymmMNeHwNy6+tcLhyDa\nGEQUNYffAgMBAAECggEACPPYkwePYFsmBptilaOB1UenF/xJzE9xDvXyhzyX2CXH\nsma2CUzBV8s+Y/5DGiIeyJlzFCBAvHOF4TM0eTZiS6SPQj8jH99fz95QhjnR/8ib\nqEdYCNIBx8tcCP3TqRDZVosL01vY64dnQgBPa7UrH82itZ2/qBeIZnlEJU//ZDyY\nEy4rbXs5PZr3Ddw2cRZplfcbJZ//zJ7DAT5SPpa9PfaIYDiEOZ/YY7+r/Wa3zkls\npFkA25334XUWVAtUdpdMS7Gmx7JCwdvaS7yOQ91ZYGrkML5UXXTDi3LMOPwqOx7c\n4zUeikhiZQSQcQJ5mvoqjcUyRXy1Omx6QtpCSDS2ZQKBgQDTVots7a5a/Rl/OXHR\nH1Uo9mX2z4JiMxCdCVej2z/DpKgi9fnxRBLoDenD8Tp7N1/dc3uz5dErcUNi+Sa0\nmrzS1H6RcuA2he4V6M+kW46sIe5qT3qUBkbfT6xjeetZx0MUIzOnCemZ5ORinUlE\nTvKHrBjhNy2JpiHGQFzSFPGMawKBgQDDvmeuzKwHw4vXxdCc7pCXK9wCgUNKVS2U\n5iuA1GzTg5IsU1AmnM1BIcaqvhh776bys+e+XsoEl7KqlsqE8FU8dsIZTlihXtzj\nduKIgY6ca8gP05M5WMQHzz9l7rDV3tx9M/hVQZOz2wh9PFfwiwYIglpW3haCR2pz\n4Kk7soHPXQKBgAXHWAiidyIFyayw5WvSb4GvOxqEkgwdWVbx6nOQiy3OUsqh7zOp\nqNqvhrTU48R6vyRPBBLnNdD6R91s8qH9mSwqo0tW2Mqk3t26f/L+jegnBV3iznc9\ntLJme1A9BTJvQGZMkB0BKGIM4DHSGy7C+d671fJSj+wznrjNCby01eYBAoGAKmTo\nq9EkSSIu/XKYdgStSDB1nA1G96hvENqw/VwEneLXG8aHi3VWdw7Lqls1jlIfRF12\niaKZ+liol43FGvm6XDgUXcq8I2caTCGJeqskqfgmAld+gWMaQd6/CmKh5hA4jN1e\noYhsZv2/XvBc03ooulsRGdNL6Ldy9NnpjUZiGvkCgYAX0MWmeP1heA4zACwaJ8AK\nOkJMUHMp9Vwnv6eTry0pKFmcaOAq+ZM/MsaY6d6E1pX14hvwiU4PXduQoeLFeZED\nhBA3Y4uopTkuYvCdDBk+I8Ra/E4U2a5wSmpxZgSPP26qWnwaejln2k7WAdcUcik3\njmOysaXzxKg+Aj9kaEIrDg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nilosheet@nilobusinesses.iam.gserviceaccount.com",
+  "client_id": "105083245285947122068",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nilosheet%40nilobusinesses.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

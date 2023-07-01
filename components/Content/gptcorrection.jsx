@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { H1Text, PText } from "../Items/Texts/texts";
 import axios from "axios";
+import { generatedGptCorrection } from "@/redux/action";
+import { useDispatch, useSelector } from "react-redux";
+import { Frame } from "../Layout/layout";
 
-const GptCorrection = ({data, datatwo}) => {
+const GptCorrection = ({sentence, translation}) => {
 
     const [gptCorrection, setGptCorrection] = useState('');
     const API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+    const dispatch = useDispatch();
+    const engUserSentence = useSelector(state => state.updateGptCorrection.correction)
 
     useEffect(() => {
-        if(data, datatwo) {
+        if(sentence, translation) {
 
             const contentGenerate = async () => {
 
@@ -17,7 +22,7 @@ const GptCorrection = ({data, datatwo}) => {
                     const res = await axios.post(
                         "https://api.openai.com/v1/engines/text-davinci-003/completions",
                         {
-                            prompt:`"Compare this portuguese sentence: ${data} with this english sentence: ${datatwo}. Say in Portuguese if the second, your sentence, is a good translation of the first one. If the ${datatwo} isn't a good translation, show how would be a good translation in English of the ${data} sentence. Remember to talk in Portuguese."`,
+                            prompt:`"Compare this portuguese sentence: ${sentence} with this english sentence: ${translation}. Tell the user using Brazilian Portuguese language if ${translation} is a good translation of the first of ${sentence}. If ${translation} isn't a good translation, show in English using "" how would be a good translation in for ${sentence}. Remember you must talk in Brazilian Portuguese with the user but the sentence corrected must be in English using "". You also must remember to be precise in the correction.`,
                             max_tokens: 100,                            
                             temperature: 0.2,
                         },
@@ -46,11 +51,18 @@ const GptCorrection = ({data, datatwo}) => {
             contentGenerate();
 
         }
-    }, [data, datatwo, API_KEY])
+    }, [sentence, translation, API_KEY])
+
+    useEffect(() => {
+        dispatch(generatedGptCorrection(gptCorrection));
+    }, [dispatch, gptCorrection])
+
 
     return (
         <>
-            <PText pText={gptCorrection} />
+            <Frame>
+                <PText pText={engUserSentence} />
+            </Frame>
         </>
     )
 

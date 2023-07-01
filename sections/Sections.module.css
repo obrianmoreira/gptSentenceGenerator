@@ -1,8 +1,7 @@
 #wall {
 
     display: flex;
-    height: 750px;
-    padding: 150px 100px 200px 100px;
+    padding: 130px 100px 130px 100px;
     background-image: url('image/background.png');
     background-size: 2400px;
     color: white;
@@ -11,6 +10,43 @@
 
 #frameText {
     flex-basis: 100%;
+}
+
+#footerText {
+    background-color: #000;
+    padding: 10px 0px 10px 0px;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+:hover#footerText{
+    color: #197ddf;
+}
+
+#inputFrame {
+    box-shadow: 0px 2px 4px 3px #f4f4f4;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-basis: 38.3%;
+}
+
+#frameButton{
+    flex-basis: 40%;
+}
+
+#inputButton {
+    background-color: #c3d3e1;
+    font-weight: 500;
+    color: #000;
+    border-radius: 0px;
+}
+
+#frameInput {
+    display: flex;
+    gap: 0px;
 }
 
 #card{
@@ -64,8 +100,7 @@
     border-radius: 5px;
     background-color: aliceblue;
     height: fit-content;
-    padding: 10px 20px 0px 20px;
-    margin-top: 30px;
+    padding: 20px 20px 10px 20px;
 }
 
 #btnDisabled {
@@ -96,14 +131,26 @@
     
     }
 
+    #inputButton {
+        background-color: #c3d3e1;
+        font-weight: 500;
+        color: #000;
+        border-radius: 0px;
+        height: fit-content;
+    }
+
     .input {
         border-radius: 5px;
         background-color: aliceblue;
         padding: 10px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
     
+    #inputFrame{
+        margin-bottom: 20px;
+    }
+
     #outputGpt{
         border-radius: 5px;
         background-color: aliceblue;
@@ -134,6 +181,16 @@
 
     #btnStyle{
         width: 100%;
+        margin-top: 10px;
+    }
+
+    #btnDisabled {
+
+        background-color: rgb(182, 181, 179);
+        color: rgb(222, 222, 222);
+        margin-top: 10px;
+        width: 100%;
+    
     }
 
     .btnResult{
