@@ -48,7 +48,7 @@ const GptSentence = ({type, tense,}) => {
 
                 } catch(error) {
 
-                    console.log("Eror", error);
+                    console.log("Error", error);
 
                 }   
 
